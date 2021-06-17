@@ -14,17 +14,17 @@ public class Menu {
     public static void main(String[] args) {
         int opcion = 0;
         while (opcion != 6) {
-            System.out.println("+====================================+");
-            System.out.println("+==========  MENU GITHUB  ===========+");
-            System.out.println("+====================================+");
-            System.out.println("+  1) Saludar (Pérez)                +");
-            System.out.println("+  2) Sumar (S.Mamaní)               +"); //agregado por Selene Mamaní
-            System.out.println("+  3) Factorial(N.Mamaní)            +"); //agregado por Noeli Mamani
-            System.out.println("+  4) Obtener Cuadrante (Cardozo)    +"); //agregado por Cardozo Franco
-            System.out.println("+  5) Calcular el porcentaje (Torrez)+"); //agregado por Torrez Miguel 
-            System.out.println("+  6) Salir del Programa             +");
-            System.out.println("+  Ingrese opcion                    +");
-            System.out.println("+====================================+");
+            System.out.println("+======================================+");
+            System.out.println("+===========  MENU GITHUB  ============+");
+            System.out.println("+======================================+");
+            System.out.println("+  1) Saludar (Pérez)                  +"); //agregado por Sergio Pérez
+            System.out.println("+  2) Sumar (S.Mamaní)                 +"); //agregado por Selene Mamaní
+            System.out.println("+  3) Factorial(N.Mamaní)              +"); //agregado por Noeli Mamani
+            System.out.println("+  4) Obtener Cuadrante (Cardozo)      +"); //agregado por Cardozo Franco
+            System.out.println("+  5) Calcular el porcentaje (Torrez)  +"); //agregado por Torrez Miguel 
+            System.out.println("+  6) Salir del Programa               +");
+            System.out.println("+  Ingrese opcion                      +");
+            System.out.println("+======================================+");
             opcion = scanner.nextInt();
             switch (opcion) {
                 case 1:
