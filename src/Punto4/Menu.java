@@ -13,7 +13,7 @@ public class Menu {
 
     public static void main(String[] args) {
         int opcion = 0;
-        while (opcion != 6) {
+        while (opcion != 7) {
             System.out.println("+======================================+");
             System.out.println("+===========  MENU GITHUB  ============+");
             System.out.println("+======================================+");
@@ -22,7 +22,8 @@ public class Menu {
             System.out.println("+  3) Factorial(N.Mamaní)              +"); //agregado por Noeli Mamani
             System.out.println("+  4) Obtener Cuadrante (Cardozo)      +"); //agregado por Cardozo Franco
             System.out.println("+  5) Calcular el porcentaje (Torrez)  +"); //agregado por Torrez Miguel 
-            System.out.println("+  6) Salir del Programa               +");
+            System.out.println("+  6) Multiplicar 2 números (Acho)     +"); //agregado por Acho Javier
+            System.out.println("+  7) Salir del Programa               +");
             System.out.println("+  Ingrese opcion                      +");
             System.out.println("+======================================+");
             opcion = scanner.nextInt();
@@ -84,7 +85,19 @@ public class Menu {
 
                     System.out.println("El porcentaje es = " + porcentage + " %");
                     break;
-                case 6:
+                    
+                case 6:  //agregado por Acho Javier
+                    int numero1= 0;
+                    int numero2 = 0;
+                    int result = 0;
+                    System.out.println("Ingrese primer número");
+                    numero1 = scanner.nextInt();
+                    System.out.println("Ingrese segundo número");
+                    numero2 = scanner.nextInt();
+                    result = numero1 * numero2;
+                    System.out.println("El resultado es: " + result);
+                    break;
+                case 7:
                     System.out.println("Saliendo del Programa");
                     System.exit(0);
                     break;
