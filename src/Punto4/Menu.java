@@ -13,7 +13,7 @@ public class Menu {
 
     public static void main(String[] args) {
         int opcion = 0;
-        while (opcion != 6) {
+        while (opcion != 7) {
             System.out.println("+======================================+");
             System.out.println("+===========  MENU GITHUB  ============+");
             System.out.println("+======================================+");
@@ -22,7 +22,8 @@ public class Menu {
             System.out.println("+  3) Factorial(N.Mamaní)              +"); //agregado por Noeli Mamani
             System.out.println("+  4) Obtener Cuadrante (Cardozo)      +"); //agregado por Cardozo Franco
             System.out.println("+  5) Calcular el porcentaje (Torrez)  +"); //agregado por Torrez Miguel 
-            System.out.println("+  6) Salir del Programa               +");
+            System.out.println("+  6) ORDENAR NUMERO (Farfan)          +");  //agregado por Farfan Yamil
+            System.out.println("+  7) Salir del Programa               +");
             System.out.println("+  Ingrese opcion                      +");
             System.out.println("+======================================+");
             opcion = scanner.nextInt();
@@ -84,7 +85,11 @@ public class Menu {
 
                     System.out.println("El porcentaje es = " + porcentage + " %");
                     break;
-                case 6:
+                    
+                 case 6: 
+                      ordenar();
+                    break;
+                case 7:
                     System.out.println("Saliendo del Programa");
                     System.exit(0);
                     break;
@@ -92,5 +97,34 @@ public class Menu {
                     System.out.println("Opcion Incorrecta");
             }
         }
+    }
+    public static void  ordenar() {
+        System.out.println("Ingresar valor de A:");
+        float a =scanner.nextFloat();
+        System.out.println("Ingresar valor de B:");
+        float b =scanner.nextFloat();
+        System.out.println("Ingresar valor de C:");
+        float c =scanner.nextFloat();
+        float mayor;
+        float menor;
+        float medio;
+        if (a > b & a > c) {
+            mayor = a;
+        } else if (b > a & b > c) {
+            mayor = b;
+        } else {
+            mayor = c;
+        }
+        if (a < b & a < c) {
+            menor = a;
+        } else if (b < a & b < c) {
+            menor = b;
+        } else {
+            menor = c;
+        }
+        medio = (a + b + c) - (mayor + menor);
+        System.out.println("Valor Mayor: " + mayor);
+        System.out.println("Valor Medio: " + medio);
+        System.out.println("Valor Menor: " + menor);
     }
 }
