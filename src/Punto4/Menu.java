@@ -22,7 +22,7 @@ public class Menu {
             System.out.println("+  3) Factorial(N.Mamaní)              +"); //agregado por Noeli Mamani
             System.out.println("+  4) Obtener Cuadrante (Cardozo)      +"); //agregado por Cardozo Franco
             System.out.println("+  5) Calcular el porcentaje (Torrez)  +"); //agregado por Torrez Miguel 
-            System.out.println("+  6) Multiplicar 2 números (Acho)     +"); //agregado por Acho Javier
+            System.out.println("+  6) Multiplicar 2 números (Acho)     +"); //agregado por Acho
             System.out.println("+  7) Salir del Programa               +");
             System.out.println("+  Ingrese opcion                      +");
             System.out.println("+======================================+");
@@ -86,7 +86,7 @@ public class Menu {
                     System.out.println("El porcentaje es = " + porcentage + " %");
                     break;
                     
-                case 6:  //agregado por Acho Javier
+                case 6:  //agregado por Acho
                     int numero1= 0;
                     int numero2 = 0;
                     int result = 0;
