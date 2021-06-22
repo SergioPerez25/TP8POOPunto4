@@ -2,6 +2,8 @@ package Punto4;
 
 import java.util.Scanner;
 import javax.swing.JOptionPane;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  *
@@ -13,7 +15,7 @@ public class Menu {
 
     public static void main(String[] args) {
         int opcion = 0;
-        while (opcion != 7) {
+        while (opcion != 8) {
             System.out.println("+======================================+");
             System.out.println("+===========  MENU GITHUB  ============+");
             System.out.println("+======================================+");
@@ -23,7 +25,8 @@ public class Menu {
             System.out.println("+  4) Obtener Cuadrante (Cardozo)      +"); //agregado por Cardozo Franco
             System.out.println("+  5) Calcular el porcentaje (Torrez)  +"); //agregado por Torrez Miguel 
             System.out.println("+  6) ORDENAR NUMERO (Farfan)          +");  //agregado por Farfan Yamil
-            System.out.println("+  7) Salir del Programa               +");
+            System.out.println("+  7) Edad (Galan)                     +");  //agregado por Galan Matias 
+            System.out.println("+  8) Salir del Programa               +");
             System.out.println("+  Ingrese opcion                      +");
             System.out.println("+======================================+");
             opcion = scanner.nextInt();
@@ -58,9 +61,9 @@ public class Menu {
                     double x = scanner.nextDouble();
                     System.out.print("Valor de y: ");
                     double y = scanner.nextDouble();
-                    if (x > 0 && y > 0) {  
+                    if (x > 0 && y > 0) {
                         System.out.println("El punto (" + x + "," + y + ") esta en el primer cuadrante");
-                    } else if (x < 0 && y > 0) {   
+                    } else if (x < 0 && y > 0) {
                         System.out.println("El punto (" + x + "," + y + ") esta en el segundo cuadrante");
                     } else if (x < 0 && y < 0) {
                         System.out.println("El punto (" + x + "," + y + ") esta en el tercer cuadrante");
@@ -71,10 +74,11 @@ public class Menu {
                     }
                     break;
                 case 5: //(Torrez Miguel)
-                    int total, score;
+                    int total,
+                     score;
                     float porcentage;
                     Scanner entrada = new Scanner(System.in);
-                    
+
                     System.out.println("Ingresa el puntaje total, o máximo: ");
                     total = entrada.nextInt();
 
@@ -85,11 +89,14 @@ public class Menu {
 
                     System.out.println("El porcentaje es = " + porcentage + " %");
                     break;
-                    
-                 case 6: 
-                      ordenar();
+
+                case 6:
+                    ordenar();
                     break;
-                case 7:
+                case 7: //Galan matias
+                    edad();
+                    break;
+                case 8:
                     System.out.println("Saliendo del Programa");
                     System.exit(0);
                     break;
@@ -98,13 +105,14 @@ public class Menu {
             }
         }
     }
-    public static void  ordenar() {
+
+    public static void ordenar() {
         System.out.println("Ingresar valor de A:");
-        float a =scanner.nextFloat();
+        float a = scanner.nextFloat();
         System.out.println("Ingresar valor de B:");
-        float b =scanner.nextFloat();
+        float b = scanner.nextFloat();
         System.out.println("Ingresar valor de C:");
-        float c =scanner.nextFloat();
+        float c = scanner.nextFloat();
         float mayor;
         float menor;
         float medio;
@@ -127,4 +135,30 @@ public class Menu {
         System.out.println("Valor Medio: " + medio);
         System.out.println("Valor Menor: " + menor);
     }
+
+    //Galan Matias
+    public static int fecha_nac(int dia, int mes, int anio) {
+        Calendar inicio = Calendar.getInstance();
+        inicio.set(anio, mes - 1, dia);
+        Calendar actual = Calendar.getInstance();
+        int diferencia = actual.get(Calendar.YEAR) - inicio.get(Calendar.YEAR);
+        if (inicio.get(Calendar.DAY_OF_YEAR) > actual.get(Calendar.DAY_OF_YEAR)) {
+            diferencia--;
+        }
+        return diferencia;
+    }
+
+    public static void edad() {
+        System.out.println("Ingrese Fecha de Nacimiento");
+        System.out.print("Digite el Dia: ");
+        int dia = scanner.nextInt();
+        System.out.print("Digite el Mes: ");
+        int mes = scanner.nextInt();
+        System.out.print("Digite el Año: ");
+        int anio = scanner.nextInt();
+        System.out.println("Fecha de Naciemieto: " + dia + "/" + mes + "/" + anio);
+        System.out.println("Edad: " + fecha_nac(dia, mes, anio) + " años");
+    }
+    //-----------------------------------
+
 }
